@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="/platform"/>
+	<classpathentry exported="true" kind="lib" path="resources"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="src"/>
+	<classpathentry kind="src" output="eclipsebin/web/classes" path="web/src"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="testsrc"/>
+	<classpathentry kind="src" output="eclipsebin/classes" path="gensrc"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/spring-webmvc-3.1.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/standard.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/hibernate-validator-4.3.1.Final.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/javax.el_2.2.0.v201303151357.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/javax.servlet.jsp.jstl-1.2.1.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/jboss-logging-3.1.1.GA.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/jstl-1.2.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/org.springframework.beans_4.0.2.20140223-RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/org.springframework.context_4.0.2.20140223-RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/org.springframework.core_4.0.2.20140223-RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/org.springframework.data.core_1.7.0.20140120-CI.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/org.springframework.web_4.0.2.20140223-RELEASE.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/servlet-api.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/slf4j-simple-1.7.10.jar"/>
+	<classpathentry kind="lib" path="web/webroot/WEB-INF/lib/validation-api-1.0.0.GA (1).jar"/>
+	<classpathentry kind="output" path="eclipsebin/notused"/>
+</classpath>

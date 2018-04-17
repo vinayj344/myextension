@@ -1,0 +1,3 @@
+INSERT_UPDATE MyCustomer;uid[unique=true];firstName;lastName;email;phone
+;vinayj344;vinay;more;vinay.more@gmail.com
+
