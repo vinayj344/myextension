@@ -20,4 +20,7 @@ INSERT_UPDATE Product;code[unique=true];name;$supercategories;manufacturerName;m
 ;201702;The Grand Big chocelate;;eclairs;;pieces;;
 ;201703;Whey;;Whey;;pieces;;
 ;201704;Peanut Butter;;Sundrop;;pieces;;
+
+UPDATE Trigger[batchmode=true];itemtype(code)[unique=true];maxAcceptableDelay
+;Trigger;1800
  

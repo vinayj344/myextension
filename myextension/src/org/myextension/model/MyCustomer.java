@@ -144,6 +144,13 @@ public class MyCustomer
 		this.address = address;
 	}
 
+	@Override
+	public String toString()
+	{
+		return "MyCustomer [firstname=" + firstname + ", lastname=" + lastname + ", gender=" + gender + ", email=" + email
+				+ ", password=" + password + ", phone=" + phone + ", address=" + address + "]";
+	}
+
 
 
 }

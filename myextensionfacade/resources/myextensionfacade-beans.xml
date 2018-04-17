@@ -17,4 +17,14 @@
 		<property name="manufacturerName" type="java.lang.String"></property>
 	</bean>
 
+	<bean class="org.myextensionfacade.MyCustomerData">
+		<property name="firstname" type="java.lang.String"></property>
+		<property name="lastname" type="java.lang.String"></property>
+		<property name="gender" type="java.lang.String"></property>
+		<property name="email" type="java.lang.String"></property>
+		<property name="password" type="java.lang.String"></property>
+		<property name="phone" type="java.lang.String"></property>
+		<property name="address" type="java.lang.String"></property>
+	</bean>
+
 </beans>

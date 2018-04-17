@@ -16,4 +16,16 @@
 		<property name="myProductService" ref="productServiceImpl"></property>
 	</bean>
 
+	<alias name="customerFacadeImpl" alias="customerFacade" />
+	<bean id="customerFacadeImpl" class="org.myextensionfacade.facades.impl.CustomerFacadeImpl">
+		<property name="modelService" ref="modelService"></property>
+		<property name="customerAccountService" ref="CustomerAccountService"></property>
+	</bean>
+
+	<alias name="defaultCustomerAccountService" alias="CustomerAccountService" />
+	<bean id="defaultCustomerAccountService"
+		class="org.myextensioncore.service.impl.DefaultCustomerAccountService">
+		<property name="modelService" ref="modelService"></property>
+	</bean>
+	
 </beans>

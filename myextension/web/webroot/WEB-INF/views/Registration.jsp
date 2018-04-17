@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -12,7 +13,6 @@ input[type=text], input[type=password], select, textarea {
 	border-radius: 4px;
 	resize: vertical;
 }
-
 input[type=submit], input[type=reset] {
 	background-color: #4CAF50;
 	color: white;
@@ -22,11 +22,9 @@ input[type=submit], input[type=reset] {
 	cursor: pointer;
 	float: right;
 }
-
 input[type=submit]:hover {
 	background-color: #00afff;
 }
-
 input[type=reset]:hover {
 	background: #ffa0a0
 }
@@ -39,39 +37,39 @@ input[type=reset]:hover {
 <body>
 
 	<div align="center">
-		<form:form action="register" method="post"
+		<form:form action="registerCustomer" method="post"
 			commandName="myCustomerForm">
 			<table border="0">
 
 				<tr>
-					<td>First Name:</td>
+				<td><spring:message code="label.firstname" /></td>
 					<td><form:input path="firstname" /></td>
 				</tr>
 
 				<tr>
-					<td>Last Name:</td>
+					<td><spring:message code="label.lastname" /></td>
 					<td><form:input path="lastname" /></td>
 				</tr>
 
 				<tr>
-					<td>gender</td>
-					<td><form:radiobuttons path="gender" items="${genders}" /></td>
+					<td><spring:message code="label.gender" /></td>
+					<td><form:radiobuttons path="gender" items="${genderList}" /></td>
 				</tr>
 
 				<tr>
-					<td>E-mail:</td>
+					<td><spring:message code="label.email" /></td>
 					<td><form:input path="email" /></td>
 				</tr>
 				<tr>
-					<td>Password:</td>
+					<td><spring:message code="label.password" /></td>
 					<td><form:password path="password" /></td>
 				</tr>
 				<tr>
-					<td>Mobile/Phone:</td>
+					<td><spring:message code="label.phone" /></td>
 					<td><form:input path="phone" /></td>
 				</tr>
 				<tr>
-					<td>Address:</td>
+					<td><spring:message code="label.address" /></td>
 					<td><form:textarea path="address" /></td>
 				</tr>
 
