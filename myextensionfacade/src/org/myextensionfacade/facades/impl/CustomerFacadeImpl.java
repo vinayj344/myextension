@@ -34,6 +34,7 @@ public class CustomerFacadeImpl implements CustomerFacade
 	{
 
 		final MyCustomerModel customerModel = getModelService().create(MyCustomerModel.class);
+		customerModel.setUid(data.getEmail());
 		customerModel.setFirstName(data.getFirstname());
 		customerModel.setLastName(data.getLastname());
 		customerModel.setEmail(data.getEmail());

@@ -14,11 +14,12 @@ package org.myextension;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Resource;
+
 import org.apache.log4j.Logger;
 import org.myextension.model.MyCustomer;
 import org.myextensionfacade.MyCustomerData;
 import org.myextensionfacade.facades.CustomerFacade;
-import org.myextensionfacade.facades.MyProductFacade;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -32,12 +33,27 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class HomeController
 {
-
-	private CustomerFacade customerFacade;
-
 	private static final Logger LOG = Logger.getLogger(HomeController.class);
 
-	private MyProductFacade myProductFacade;
+	@Resource(name = "customerFacade")
+	private CustomerFacade customerFacade;
+
+	/**
+	 * @return the customerFacade
+	 */
+	public CustomerFacade getCustomerFacade()
+	{
+		return customerFacade;
+	}
+
+	/**
+	 * @param customerFacade
+	 *           the customerFacade to set
+	 */
+	public void setCustomerFacade(final CustomerFacade customerFacade)
+	{
+		this.customerFacade = customerFacade;
+	}
 
 	@RequestMapping(value = "/register", method = RequestMethod.GET)
 	public String viewRegistrationPage(final Model model)
@@ -63,7 +79,7 @@ public class HomeController
 		customerData.setPassword(myCustomer.getPassword());
 		customerData.setPhone(myCustomer.getPhone());
 		customerData.setAddress(myCustomer.getAddress());
-		customerFacade.register(customerData);
+		getCustomerFacade().register(customerData);
 
 		model.addAttribute("success", "Registration Successfull");
 		return "Registration";

@@ -21,6 +21,7 @@ input[type=submit], input[type=reset] {
 	border-radius: 4px;
 	cursor: pointer;
 	float: right;
+	
 }
 input[type=submit]:hover {
 	background-color: #00afff;
@@ -72,10 +73,11 @@ input[type=reset]:hover {
 					<td><spring:message code="label.address" /></td>
 					<td><form:textarea path="address" /></td>
 				</tr>
-
+				
 				<tr>
 					<td><input type="reset" /></td>
 					<td><input type="submit" value="Register" /></td>
+					
 				</tr>
 			</table>
 		</form:form>
