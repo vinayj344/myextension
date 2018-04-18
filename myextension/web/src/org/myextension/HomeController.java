@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 
 import org.apache.log4j.Logger;
 import org.myextension.model.MyCustomer;
@@ -22,6 +23,7 @@ import org.myextensionfacade.MyCustomerData;
 import org.myextensionfacade.facades.CustomerFacade;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -65,9 +67,14 @@ public class HomeController
 	}
 
 	@RequestMapping(value = "/registerCustomer", method = RequestMethod.POST)
-	public String registerCustomer(@ModelAttribute("myCustomerForm") final MyCustomer myCustomer, final Model model)
-			throws Exception
+	public String registerCustomer(@Valid @ModelAttribute("myCustomerForm") final MyCustomer myCustomer,
+			final BindingResult bindingResult, final Model model) throws Exception
 	{
+		if (bindingResult.hasErrors())
+		{
+			LOG.warn(bindingResult);
+			return "Registration";
+		}
 		LOG.info(myCustomer);
 		initLists(model);
 

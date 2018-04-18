@@ -16,6 +16,8 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import com.sun.istack.internal.NotNull;
+
 
 /**
  *
@@ -24,25 +26,30 @@ public class MyCustomer
 {
 
 	@NotEmpty
+	@NotNull
 	private String firstname;
 
 	@NotEmpty
+	@NotNull
 	private String lastname;
 
 	@NotEmpty
+	@NotNull
 	private String gender;
 
 	@Email
 	@NotEmpty
 	private String email;
 
-	@NotEmpty
+	@NotNull
+	@Size(min = 6)
 	private String password;
 
 	@Size(min = 10, max = 10)
 	private String phone;
 
 	@NotEmpty
+	@NotNull
 	private String address;
 
 	/**

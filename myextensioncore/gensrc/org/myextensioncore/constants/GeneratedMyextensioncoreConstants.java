@@ -1,7 +1,7 @@
 /*
  * ----------------------------------------------------------------
  * --- WARNING: THIS FILE IS GENERATED AND WILL BE OVERWRITTEN! ---
- * --- Generated at Apr 17, 2018 2:10:09 PM                     ---
+ * --- Generated at Apr 18, 2018 4:46:33 PM                     ---
  * ----------------------------------------------------------------
  */
 package org.myextensioncore.constants;

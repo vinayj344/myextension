@@ -28,4 +28,7 @@
 		<property name="myProductDAO" ref="productDAOImpl"></property>
 	</bean>
 
+	<bean id="sendEmailJob" class="org.myextensioncore.jobs.SendEmailJob"
+		parent="abstractJobPerformable"></bean>
+
 </beans>
