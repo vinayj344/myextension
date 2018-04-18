@@ -11,18 +11,38 @@
  */
 package org.myextension.model;
 
+import javax.validation.constraints.Size;
+
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.NotEmpty;
+
+
 /**
  *
  */
 public class MyCustomer
 {
 
+	@NotEmpty
 	private String firstname;
+
+	@NotEmpty
 	private String lastname;
+
+	@NotEmpty
 	private String gender;
+
+	@Email
+	@NotEmpty
 	private String email;
+
+	@NotEmpty
 	private String password;
+
+	@Size(min = 10, max = 10)
 	private String phone;
+
+	@NotEmpty
 	private String address;
 
 	/**
